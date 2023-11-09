@@ -1,0 +1,152 @@
+@charset "UTF-8";
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #000000;
+    font-family: Arial, Helvetica, sans-serif;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    background-color: burlywood;
+}
+
+h1, h2{
+    font-weight: 800;
+    color: rgb(0, 0, 0)e2e;
+    text-transform: uppercase; 
+}
+
+.wrapper{
+    width: 100%;
+    margin: 0 auto;
+}
+
+main{
+    display: block;
+    background: burlywood;
+}
+
+.container{
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 0 25px;
+    animation: severino 2s ease-in-out;
+    animation-timeline: view();
+    animation-range: cover 0 cover 40%;
+
+}
+
+section.modulo p{
+    margin-bottom: 30px;
+    text-align: justify;
+    font-size: 1.3em;
+}
+
+section.modulo h2{
+    margin-bottom: 30px;
+    font-size: 30px;
+    letter-spacing: .5em;
+    text-align: center;
+   
+}
+
+section.modulo.content{
+    padding: 40px 0;
+    background: bisque;
+}
+
+section.modulo.parallax{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh !important;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    background-position: 58% 58%;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-attachment: fixed;
+}
+
+section.modulo.parallax h1{
+    color: #fff;
+    text-shadow: 7px 7px 7px rgb(0, 0, 0, 0.614);
+    text-align: center;
+    font-size: 75px;
+    z-index: 100;
+}
+
+section.modulo.parallax::after{ 
+    content:"";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 10;
+    background: linear-gradient(to bottom,rgba(0,0,0,0)0, rgba(0,0,0,0) 30%, #000000 100% ) ;
+
+}
+
+
+section.modulo.parallax-1{
+    background-image: url("https://cdn.pixabay.com/photo/2016/04/12/11/19/coffee-1324126_1280.jpg");
+}
+section.modulo.parallax-2{
+    background-image: url("https://cdn.pixabay.com/photo/2017/08/07/22/57/coffee-2608864_1280.jpg");
+}
+section.modulo.parallax-3{
+    background-image: url("https://cdn.pixabay.com/photo/2015/05/31/10/54/coffee-791045_1280.jpg");
+}
+
+    @keyframes severino {
+        from{
+            translate: -100vw 0;
+            color: rgb(165, 101, 42);
+            opacity: 0;
+        }
+
+        to{
+            translate: 0 0;
+            color: rgb(92, 68, 38);
+            opacity: 1;
+        }
+    }
+
+
+    @media all and (max-width: 860px) {
+
+        section.modulo.parallax h1{
+            color: #ffffff;
+            text-shadow: 5px 5px 7px rgb(0, 0, 0, 0.614);
+            text-align: center;
+            font-size: 2.5em;
+            z-index: 100;
+        }
+
+        section.modulo p{
+            margin-bottom: 10px;
+            text-align: center;
+            font-size: 1em;
+        }
+
+        section.modulo.content{
+            width: 90%;
+
+        }
+
+        section.modulo h2{
+            margin-bottom: 30px;
+            font-size: 15px;
+            text-align: center;
+        }
+
+        section.modulo.parallax-1{
+            background-image: url(https://www.petz.com.br/blog/wp-content/uploads/2021/08/como-plantar-cafe2.jpg);
+        }
+
+
+    }
+
+
+
